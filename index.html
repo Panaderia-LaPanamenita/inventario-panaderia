@@ -82,9 +82,9 @@
 <p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"text/javascript"</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
 <p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"text/javascript"</span><span class="s3">&gt;</span></p>
 <p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Inicializar EmailJS con tu clave pública</span></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// IMPORTANTE: Reemplaza 'TU_CLAVE_PUBLICA' con tu clave real de EmailJS.</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// IMPORTANTE: Reemplaza 'G22FNd9C9t7JSEkS_' con tu clave real de EmailJS.</span></p>
 <p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>(</span><span class="s7">function</span><span class="s1">() {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>emailjs.init(</span><span class="s9">"TU_CLAVE_PUBLICA"</span><span class="s1">);<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>emailjs.init(</span><span class="s9">"G22FNd9C9t7JSEkS_"</span><span class="s1">);<span class="Apple-converted-space"> </span></span></p>
 <p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>})();</span></p>
 <p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
 <p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
@@ -263,9 +263,9 @@
 <p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>inventory_data: </span><span class="s13">JSON</span><span class="s1">.stringify(productsData, </span><span class="s7">null</span><span class="s1">, </span><span class="s12">2</span><span class="s1">) </span><span class="s14">// Formatear como string para el correo</span></p>
 <p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
 <p class="p9"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// IMPORTANTE: Reemplaza 'TU_SERVICE_ID' y 'TU_TEMPLATE_ID' con tus IDs reales.</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// IMPORTANTE: Reemplaza 'service_faqgll8' y 'template_yb6g64n' con tus IDs reales.</span></p>
 <p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Para encontrar estos IDs, ve a tu cuenta de EmailJS.</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>emailjs.send(</span><span class="s9">'TU_SERVICE_ID'</span><span class="s1">, </span><span class="s9">'TU_TEMPLATE_ID'</span><span class="s1">, templateParams)</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>emailjs.send(</span><span class="s9">'service_faqgll8'</span><span class="s1">, </span><span class="s9">'template_yb6g64n'</span><span class="s1">, templateParams)</span></p>
 <p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>.then(</span><span class="s7">function</span><span class="s1">(response) {</span></p>
 <p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>console.log(</span><span class="s9">'Correo enviado con éxito'</span><span class="s1">, response.status, response.text);</span></p>
 <p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span>showModal(</span><span class="s1">'¡Éxito!'</span><span class="s4">, </span><span class="s1">'El inventario ha sido enviado por correo con éxito.'</span><span class="s4">);</span></p>
