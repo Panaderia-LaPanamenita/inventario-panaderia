@@ -208,19 +208,8 @@
                 day: 'numeric'
             });
 
-            // Generar la tabla HTML para el correo
-            let inventoryHtmlTable = `
-                <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-                    <thead>
-                        <tr style="background-color: #f2f2f2;">
-                            <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Producto</th>
-                            <th style="padding: 10px; text-align: center; border: 1px solid #ddd;">Inicial</th>
-                            <th style="padding: 10px; text-align: center; border: 1px solid #ddd;">Producida</th>
-                            <th style="padding: 10px; text-align: center; border: 1px solid #ddd;">Final</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            `;
+            // Generar la lista de productos en texto plano
+            let inventoryListText = '';
 
             products.forEach(product => {
                 const productSlug = product.replace(/\s/g, '-');
@@ -230,28 +219,17 @@
 
                 // Solo agrega las filas si hay valores en los campos
                 if (inicial > 0 || producida > 0 || final > 0) {
-                    inventoryHtmlTable += `
-                        <tr>
-                            <td style="padding: 10px; border: 1px solid #ddd;">${product}</td>
-                            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">${inicial}</td>
-                            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">${producida}</td>
-                            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">${final}</td>
-                        </tr>
-                    `;
+                    inventoryListText += `${product}: Inicial: ${inicial}, Producida: ${producida}, Final: ${final}\n`;
                 }
             });
 
-            inventoryHtmlTable += `
-                    </tbody>
-                </table>
-            `;
 
             // Preparar el objeto de datos para EmailJS
             const templateParams = {
                 employee_name: employeeName,
                 shift_type: shiftType,
                 report_date: currentDate,
-                inventory_data: inventoryHtmlTable
+                inventory_data: inventoryListText
             };
 
             // Envío del correo
